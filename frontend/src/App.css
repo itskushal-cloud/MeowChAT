@@ -1,0 +1,350 @@
+/* =========================================
+   NAVIGATION BUTTONS
+   ========================================= */
+
+.meow-button {
+  position: relative;
+
+  width: 100px;
+  height: 100px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 28px;
+
+  background: rgba(255, 255, 255, 0.15);
+
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+
+  border: 1px solid rgba(255, 255, 255, 0.3);
+
+  box-shadow:
+    0 8px 25px rgba(0, 0, 0, 0.12),
+    inset 0 1px 3px rgba(255, 255, 255, 0.25);
+
+  color: #FFD6E7;
+
+  cursor: pointer;
+
+  transition:
+    transform 0.3s ease,
+    background 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+
+/* Navigation button hover */
+
+.meow-button:hover {
+  transform: translateY(10px) rotate(1deg) scale(1.25);
+
+  background: rgba(255, 255, 255, 0.25);
+
+  box-shadow:
+    0 14px 30px rgba(0, 0, 0, 0.15),
+    inset 0 1px 4px rgba(255, 255, 255, 0.3);
+}
+
+
+/* Navigation button click */
+
+.meow-button:active {
+  transform: translateY(2px) scale(1.25);
+
+  box-shadow:
+    0 4px 12px rgba(0, 0, 0, 0.12),
+    inset 0 2px 4px rgba(0, 0, 0, 0.08);
+}
+
+
+/* Cute paw */
+
+.meow-button::after {
+  content: "🐾";
+
+  position: absolute;
+
+  top: -14px;
+  right: -10px;
+
+  font-size: 23px;
+
+  opacity: 0;
+
+  transform: scale(0) rotate(-10deg);
+
+  transition:
+    opacity 0.25s ease,
+    transform 0.3s ease;
+}
+
+
+.meow-button:hover::after {
+  opacity: 0.75;
+
+  transform:
+    scale(1)
+    rotate(10deg);
+}
+
+
+/* Navigation icons */
+
+.meow-button img {
+  width: 65px;
+  height: 65px;
+
+  object-fit: contain;
+
+  transition:
+    transform 0.3s ease;
+}
+
+
+.meow-button:hover img {
+  transform:
+    scale(1.1)
+    rotate(-180deg);
+}
+
+
+.meow-button:active img {
+  transform: scale(0.9);
+}
+
+
+/* =========================================
+   FILTER BUTTONS
+   ========================================= */
+
+.filter-button {
+  position: relative;
+
+  padding: 11px 20px;
+
+  font-size: 18px;
+  font-weight: 600;
+
+  border-radius: 999px;
+
+  background: rgba(255, 255, 255, 0.14);
+
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+
+  border: 1px solid rgba(255, 255, 255, 0.3);
+
+  color: rgba(255, 255, 255, 0.95);
+
+  cursor: pointer;
+
+  transition:
+    transform 0.25s ease,
+    background 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+
+/* Filter hover */
+
+.filter-button:hover {
+  background: rgba(255, 255, 255, 0.28);
+
+  transform:
+    translateY(-3px)
+    scale(1.04);
+
+  box-shadow:
+    0 6px 15px rgba(0, 0, 0, 0.12);
+}
+
+
+/* Filter click */
+
+.filter-button:active {
+  transform: scale(0.94);
+}
+
+
+/* =========================================
+   CONVERSATION CARDS
+   ========================================= */
+
+.conv_leaf {
+  position: relative;
+
+  width: 600px;
+  min-height: 140px;
+
+  padding: 22px 25px;
+
+  box-sizing: border-box;
+
+  border-radius: 22px;
+
+  background: rgba(255, 255, 255, 0.15);
+
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+
+  border: 1px solid rgba(255, 255, 255, 0.3);
+
+  box-shadow:
+    0 7px 20px rgba(0, 0, 0, 0.11),
+    inset 0 1px 3px rgba(255, 255, 255, 0.2);
+
+  cursor: pointer;
+
+  transition:
+    transform 0.3s ease,
+    background 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+
+/* Conversation hover */
+
+.conv_leaf:hover {
+  transform:
+    translateY(-5px)
+    scale(1.015);
+
+  background: rgba(255, 255, 255, 0.23);
+
+  box-shadow:
+    0 12px 28px rgba(0, 0, 0, 0.15),
+    inset 0 1px 4px rgba(255, 255, 255, 0.3);
+}
+
+
+/* Conversation click */
+
+.conv_leaf:active {
+  transform:
+    translateY(1px)
+    scale(0.985);
+}
+
+
+/* =========================================
+   CONVERSATION PAW
+   ========================================= */
+
+.conv_leaf::after {
+  content: "🐾";
+
+  position: absolute;
+
+  top: 14px;
+  right: 18px;
+
+  font-size: 20px;
+
+  opacity: 0;
+
+  transform:
+    scale(0)
+    rotate(-20deg);
+
+  transition:
+    opacity 0.25s ease,
+    transform 0.3s ease;
+}
+
+
+.conv_leaf:hover::after {
+  opacity: 0.65;
+
+  transform:
+    scale(1)
+    rotate(10deg);
+}
+
+
+/* =========================================
+   USERNAME
+   ========================================= */
+
+.conv_username {
+  margin: 0;
+
+  font-size: 26px;
+  font-weight: 700;
+
+  color: #FFD6E7;
+
+  letter-spacing: 0.5px;
+
+  transition:
+    transform 0.25s ease,
+    color 0.25s ease;
+}
+
+
+.conv_leaf:hover .conv_username {
+  transform: translateX(5px);
+
+  color: #FFE8F1;
+}
+
+
+/* =========================================
+   BIO
+   ========================================= */
+
+.conv_bio {
+  margin-top: 8px;
+
+  font-size: 18px;
+
+  line-height: 1.5;
+
+  color: rgba(255, 240, 247, 0.82);
+
+  max-width: 90%;
+
+  transition:
+    color 0.25s ease;
+}
+
+
+.conv_leaf:hover .conv_bio {
+  color: rgba(255, 245, 250, 0.95);
+}
+.chatlist {
+  width: 900px;
+  min-height: 750px;
+
+  margin: 70px auto;
+  padding: 40px 35px;
+
+  background: rgba(255, 255, 255, 0.12);
+
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+
+  border: 1px solid rgba(255, 255, 255, 0.3);
+
+  border-radius: 28px;
+
+  box-shadow:
+    0 8px 25px rgba(0, 0, 0, 0.12),
+    inset 0 1px 3px rgba(255, 255, 255, 0.2);
+}
+
+.filterlist {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+
+  gap: 16px;
+
+  margin-bottom: 40px;
+
+  flex-wrap: wrap;
+}
